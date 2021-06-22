@@ -1,12 +1,33 @@
-<script src="myscripts.js"></script>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 
 <select id="carSelect">
   <option></option>
-  <option value="Audi">Audi</option>
-  <option value="Ferrari">Ferrari</option>
-  <option value="Fiat">Fiat</option>
+  <option value="Audi">Taku</option>
+  <option value="Ferrari">Saves</option>
+  <option value="Fiat">The</option>
+  <option value="Fiat">Day</option>
 </select>
 
 <p id="choiceDisplay">
   Selection Display
 </p>
+<script type="text/javascript">
+
+
+$( document ).ready(function() {
+  $('select').change(function(){
+      const options = $("option");
+      let selectedOption = "";
+      options.each(function(index){
+        let option = options[index];
+        if($(option).prop("selected")) {
+          selectedOption = $(option).val();
+        };
+      });
+      $("#choiceDisplay").empty().append(selectedOption);
+  });
+});
+	
+</script>
