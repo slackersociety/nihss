@@ -1,3 +1,5 @@
+<script src="myscripts.js"></script>
+
 <select id="carSelect">
   <option></option>
   <option value="Audi">Audi</option>
@@ -8,19 +10,3 @@
 <p id="choiceDisplay">
   Selection Display
 </p>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
-<script>
-$('select').change(function(){
-		const options = $("option");
-    let selectedOption = "";
-    options.each(function(index){
-    	let option = options[index];
-      if($(option).prop("selected")) {
-      	selectedOption = $(option).val();
-      };
-    });
-		$("#choiceDisplay").empty().append(selectedOption);
-});
-</script>
- 

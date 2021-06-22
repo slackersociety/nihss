@@ -1,0 +1,11 @@
+$('select').change(function(){
+		const options = $("option");
+    let selectedOption = "";
+    options.each(function(index){
+    	let option = options[index];
+      if($(option).prop("selected")) {
+      	selectedOption = $(option).val();
+      };
+    });
+		$("#choiceDisplay").empty().append(selectedOption);
+});
