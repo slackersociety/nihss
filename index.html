@@ -1,0 +1,24 @@
+<select id="carSelect">
+  <option></option>
+  <option value="Audi">Audi</option>
+  <option value="Ferrari">Ferrari</option>
+  <option value="Fiat">Fiat</option>
+</select>
+
+<p id="choiceDisplay">
+  Selection Display
+</p>
+
+<script type="text/javascript">
+$('select').change(function(){
+		const options = $("option");
+    let selectedOption = "";
+    options.each(function(index){
+    	let option = options[index];
+      if($(option).prop("selected")) {
+      	selectedOption = $(option).val();
+      };
+    });
+		$("#choiceDisplay").empty().append(selectedOption);
+});
+</script>
